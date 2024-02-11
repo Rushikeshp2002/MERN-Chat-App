@@ -4,12 +4,13 @@
 import styled from "styled-components";
 import Logo from "../assets/logo.svg";
 import { useEffect, useState } from "react";
+
 // eslint-disable-next-line no-unused-vars, react/prop-types
 const Contacts = ({ contacts, currentUser, changeChat }) => {
   const [currentUserName, setCurrentUserName] = useState(undefined);
   const [currentUserImage, setCurrentUserImage] = useState(undefined);
   const [currentSelected, setCurrentSelected] = useState(undefined);
-
+  
   useEffect(() => {
     if (currentUser) {
       setCurrentUserImage(currentUser.avatarImage);
@@ -157,6 +158,55 @@ const Container = styled.div`
         h2{
             font-size:1rem;
         }
+      }
+    }
+    @media screen and (max-width: 600px){
+      border-radius:0rem;
+      display: grid;
+      overflow-x: scroll;
+      grid-template-rows: 30% 70% 0%;
+      width: 100vw;
+      padding: 4px 13px;
+
+      .brand{
+        margin-top: 2rem;
+      }
+      
+      .contacts{
+          display: flex;
+          flex-direction: row;
+
+          width: 100%;
+          overflow-x: scroll;
+          &::-webkit-scrollbar{
+            width:10px;
+            &-thumb{
+                background-color: transparent;
+                width:10px;
+                border-radius:0rem;
+            }
+        }
+
+        .contact{
+          min-height: 1rem;
+          padding: 3px 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 6px;
+          .avatar{
+            img{
+              height: 2rem;
+              margin-top: 2px;
+            }
+          }
+          /* background-color: transparent; */
+      }
+      }
+      .current-user{
+        display: none;
+        background-color: transparent;
+        gap: 0rem;
       }
     }
 

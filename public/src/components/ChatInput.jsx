@@ -146,5 +146,33 @@ const Container = styled.div`
         }
 
     }
+    @media screen and (max-width: 600px){
+        padding: 15px;
+        margin-top:-2rem;
+        .button-container{
+            .emoji{
+                position: relative;
+                top: 2px;
+                svg{
+                    font-size: 1.7rem;
+                }
+            
+            .emoji-picker-react{
+                position: absolute;
+                top: -125vw;
+            }
+        }
+        }
+        .input-container{
+            margin-left: 1.2rem;
+            width: 86vw;
+            input{
+                width: 100%;
+                padding: 6px;
+                padding-left: 20px;
+            }
+        }
+
+    }
 `;
 export default ChatInput

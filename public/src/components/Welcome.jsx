@@ -26,6 +26,24 @@ const Container = styled.div`
     span{
         color: #4e0eff;
     }
+
+    @media screen and (max-width: 600px){
+      margin-top: 25rem;
+      text-align: center;
+      img{
+        height: 40rem;
+      }
+      span{
+        text-align: center;
+      }
+      h1{
+        margin-top: -2rem;
+        margin-left: -6rem;
+      }
+      h3{
+        margin-left: -6rem;
+      }
+    }
 `;
 
 export default Welcome

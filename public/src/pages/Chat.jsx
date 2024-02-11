@@ -88,8 +88,26 @@ const Container = styled.div`
     grid-template-columns: 25% 75%;
     @media screen and (min-width: 720px) and (max-width: 1080px) {
       grid-template-columns: 35% 65%;
-    }
+    } 
+    
   }
+  @media screen and (max-width: 600px) {
+    background-color: #020202;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    gap: 0rem;
+    display: flex;
+    flex-direction: row;
+    .container{
+      height: 100vh;
+      width: 100vw;
+      margin-left: 0rem;
+      border-radius: 0rem;
+      grid-template-rows: 20% 80%;
+      box-shadow: 0px 0px 0px 0px #000000;
+      }
+    }
 `;
 
 export default Chat

@@ -162,6 +162,32 @@ const FormContainer = styled.div`
       }
     }
   }
-`;
+  @media screen and (max-width: 600px){
+    background-color: #131324;
+    /* overflow: hidden; */
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
+    form{
+      box-sizing: border-box;
+      /* overflow: hidden; */
+      padding: 2rem 2rem;
+      input{
+        width: 80vw;
+      }
+      span{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+        text-transform: capitalize;
+        a{
+          text-transform: uppercase;
+        }
+      }
+    }
+
+  }
+  `;
 
 export default Login;

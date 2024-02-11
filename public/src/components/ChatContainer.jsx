@@ -171,5 +171,13 @@ const Container = styled.div`
       
     }
   }
+  @media screen and (max-width: 600px){
+    margin-top: 10rem;
+    margin-left: -6.5rem;
+    .chat-header{
+      /* margin-top: 1rem; */
+    }
+
+  }
 `;
 export default ChatContainer;

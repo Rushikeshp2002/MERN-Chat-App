@@ -48,7 +48,7 @@ const SetAvatar = () => {
   useEffect(() => {
     const dataFun = async () => {
       const data = [];
-      for (let i = 0; i < 4; i++) {
+      for (let i = 0; i < 6; i++) {
         const image = await axios.get(
           `${api}/${Math.round(Math.random() * 1000)}`
         );
@@ -150,6 +150,22 @@ const Container = styled.div`
     &:hover {
       background-color: #4e0eff;
     }
+  }
+  @media screen and (max-width: 600px){
+    gap: 1rem;
+    /* whole body*/
+   .titleContainer{
+    text-align: center;
+   }
+   .avatars{
+    display:inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap:wrap;
+    gap: 0.4rem;
+    width: 100vw;
+   }
+
   }
 `;
 export default SetAvatar;
