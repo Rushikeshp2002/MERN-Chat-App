@@ -5,19 +5,22 @@ const mongoose = require('mongoose');
 const userRoutes = require('./routes/userRoutes')
 const messageRoute = require ('./routes/messageRoutes')
 const socket = require('socket.io')
+const path = require('path');
 
 const app = express();
 require("dotenv").config();
+
+app.get('/',(req,res)=>{
+    app.use(express.static(path.resolve(__dirname,"public","dist")));
+    res.sendFile(path.resolve(__dirname,"public","dist","index.html"));
+});
 
 app.use(cors());
 app.use(express.json());
 app.use("/api/auth",userRoutes)
 app.use("/api/messages",messageRoute)
 
-mongoose.connect(process.env.MONGO_URL,{
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-})
+mongoose.connect(process.env.MONGO_URL)
 .then(()=>{
     console.log("DB connection established")
 })
