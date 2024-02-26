@@ -27,4 +27,17 @@ This project is a real-time chat application built using React, Node.js, Socket.
 - **Other Tools**: Axios, react-toastify, uuid
 <br>
 
+<h1>Application UI</h1>
+<h3>Login</h3>
+<img src="https://github.com/Rushikeshp2002/Images/blob/main/mern/Login.png"></img>
+<h3>Register</h3>
+<img src="https://github.com/Rushikeshp2002/Images/blob/main/mern/Register.png"></img>
+<h3>Set Avatar</h3>
+<img src="https://github.com/Rushikeshp2002/Images/blob/main/mern/setAvatar.png"></img>
+<h3>Main Dashboard</h3>
+<img src="https://github.com/Rushikeshp2002/Images/blob/main/mern/main.png"></img>
+<h3>Chat Interface</h3>
+<img src="https://github.com/Rushikeshp2002/Images/blob/main/mern/chat.png"></img>
+<h3>Emoji Picker</h3>
+<img src="https://github.com/Rushikeshp2002/Images/blob/main/mern/Emoji%20Picker.png"></img>
 
